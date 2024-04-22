@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="styles.css"-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>ClickJacking Finder</title>
+</head>
+<body>
+    <h1>Clickjacking Finder</h1>
+    <form action="/update_config" method="post">
+        <label for="urltocrawl">Enter URL to find :</label><br>
+        <input type="url" id="urltocrawl" name="urltocrawl" required><br><br>
+        <button type="submit">Submit</button>
+        <button id="clearButton" type="button" onclick="clearCrawledUrls()">Clear</button>
+        <button id="whitelistButton" type="button" onclick="navigateToWhitelistedUrls()" disabled>Enter Whitelisted URLs</button>
+    </form>
+    
+    {% if updated %}
+    <p>Configuration updated successfully.</p>
+    {% endif %}
+    
+    {% if crawled_urls %}
+    <h2>Crawled URLs:</h2>
+    <ul>
+        {% for url in crawled_urls %}
+        <li>{{ url }}</li>
+        {% endfor %}
+    </ul>
+    <script>
+        // Enable "Enter Whitelisted URLs" button when crawled URLs are displayed
+        document.getElementById('whitelistButton').disabled = false;
+    </script>
+    {% endif %}
+
+    <script>
+        function clearCrawledUrls() {
+            // Send a POST request to the /clear route to clear the crawled URLs
+            fetch('/clear', {
+                method: 'POST'
+            })
+            .then(response => {
+                // Reload the page after clearing the crawled URLs
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error clearing crawled URLs:', error);
+            });
+        }
+
+        function navigateToWhitelistedUrls() {
+            window.location.href = '/whitelisted_urls';
+        }
+
+        // Disable "Enter Whitelisted URLs" button when "Clear" button is clicked
+        document.getElementById('clearButton').addEventListener('click', function() {
+            document.getElementById('whitelistButton').disabled = true;
+        });
+    </script>
+</body>
+</html>

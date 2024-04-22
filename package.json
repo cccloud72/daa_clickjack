@@ -1,0 +1,19 @@
+{
+  "name": "Clickjacking Finder",
+  "version": "1.0.0",
+  "description": "This application is used find Clickjacking Attack",
+  "scripts": {
+    "asyncapp" : "node withAsyncLibrary.js",
+    "emitterapp" : "node withOutAsyncLibrary.js",
+    "test": "node mochaTest.js"
+  },
+  
+  "dependencies": {
+    "async": "^2.1.4",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "request": "^2.79.0"
+  },
+  "author": "Sanjay Vicky Pravin",
+  "license": "ISC"
+ }

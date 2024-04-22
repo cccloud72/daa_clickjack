@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="styles.css"-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Enter Whitelisted URLs</title>
+</head>
+<body>
+    <h1>Enter Whitelisted URLs</h1>
+    <form action="/whitelisted_urls" method="post">
+        <label for="num_urls">Number of Whitelisted URLs:</label>
+        <input type="number" id="num_urls" name="num_urls" min="1" required><br><br>
+        <div id="url_inputs">
+            <!-- Whitelisted URL input fields will be added dynamically here -->
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const numUrlsInput = document.getElementById("num_urls");
+            const urlInputsContainer = document.getElementById("url_inputs");
+            numUrlsInput.addEventListener("input", function() {
+                urlInputsContainer.innerHTML = "";
+                const numUrls = parseInt(numUrlsInput.value, 10);
+                for (let i = 0; i < numUrls; i++) {
+                    const input = document.createElement("input");
+                    input.type = "url";
+                    input.name = "whitelisted_url";
+                    input.placeholder = "Enter URL " + (i + 1);
+                    input.required = true;
+                    urlInputsContainer.appendChild(input);
+                    urlInputsContainer.appendChild(document.createElement("br"));
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>

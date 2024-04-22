@@ -1,0 +1,10 @@
+Time : Mon Apr 22 2024 02:17:52 GMT-0400 (Eastern Daylight Time). MessageLog : Log file name : asyncapp.txt. 
+Time : Mon Apr 22 2024 02:17:52 GMT-0400 (Eastern Daylight Time). MessageLog : Web Crawling starts. Crawled url is maintained in CSV file. Filename - asyncapp.csv. 
+Time : Mon Apr 22 2024 02:17:54 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/vendor/css-hamburgers/hamburgers.min.css : text/css. 
+Time : Mon Apr 22 2024 02:17:54 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/vendor/animate/animate.css : text/css. 
+Time : Mon Apr 22 2024 02:17:54 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/libs/main.css : text/css. 
+Time : Mon Apr 22 2024 02:17:54 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/css/main.css : text/css. 
+Time : Mon Apr 22 2024 02:17:55 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/css/create_main.css : text/css. 
+Time : Mon Apr 22 2024 02:17:55 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/images/icons/favicon.ico : image/x-icon. 
+Time : Mon Apr 22 2024 02:17:55 GMT-0400 (Eastern Daylight Time). MessageLog : Getting unexpected response from url http://192.168.216.196/quizsw/quiz/css/create_util.css : text/css. 
+Time : Mon Apr 22 2024 02:17:55 GMT-0400 (Eastern Daylight Time). MessageLog : All URLs have been processed.. 

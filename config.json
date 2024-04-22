@@ -1,0 +1,14 @@
+{
+    "asyncapp": {
+        "logfilename": "asyncapp.txt",
+        "csvfilename": "asyncapp.csv"
+    },
+    "emitterapp": {
+        "logfilename": "emitterapp.txt",
+        "csvfilename": "emitterapp.csv"
+    },
+    "urltocrawl": "http://192.168.216.196/quizsw/quiz/",
+    "queueworkers": 10,
+    "logfilewritemodeflag": "w",
+    "csvfilewritemodeflag": "w"
+}
